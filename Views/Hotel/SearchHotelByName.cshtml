@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Parkview.Models.Hotel>
+
+<div class="row mt-2">
+    <div class="col-md-3">
+        @if (Model.Count() > 0)
+        {
+            @foreach (var hotel in Model)
+            {
+                <partial name="HotelPartialView" model="hotel" />
+            }
+        }
+        else
+        {
+            <p class="mt-2 text-center">Currently No Hotels Available!!!</p>
+        }
+    </div>
+</div>

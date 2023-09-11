@@ -1,0 +1,279 @@
+﻿<style>
+    #complogo {
+        margin-left: 10em;
+        width: 70px;
+        height: 70px;
+    }
+
+    .navbar {
+        height: 75px;
+    }
+
+
+    .nav-link {
+        font-size: 1.0em;
+        font-family: Calibri;
+        font-weight: bold;
+        margin-left: 0.7em;
+        color: black;
+    }
+
+
+        .nav-link:hover {
+            color: darkgrey;
+        }
+
+    #bookbtn {
+        background: rgb(246,194,146);
+        background: linear-gradient(0deg, rgba(246,194,146,1) 0%, rgba(198,100,7,1) 88%);
+        color: white;
+        transition: background-color 0.2s, transform 0.2s;
+        font-weight: bold;
+        font-family: Calibri;
+    }
+
+        #bookbtn:hover {
+            background-color: rgba(214, 110, 12, 1);
+            transform: scale(1.1);
+        }
+
+    .btn {
+        background: rgb(198,100,7);
+        background: linear-gradient(0deg, rgba(198,100,7,1) 25%, rgba(246,194,146,1) 98%);
+        color: aliceblue;
+    }
+</style>
+
+
+
+
+@*------------------------------------------------------navbar------------------------------------------------------------------*@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img id="complogo" src="~/images/logo.png" alt="company-logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Destination" asp-action="Index">DESTINATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dining">DINING</a>
+                    </li>
+                    <partial name="_LoginPartial" />
+                </ul>
+            </div>
+            <div>
+                <a id="bookbtn" style="margin-right:130px;" class="btn" type="button" asp-controller="HotelChain" asp-action="Index">BOOK A STAY</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<br />
+<br />
+
+
+@*--------------------------------------------------------------body-------------------------------------------------------------------------*@
+
+<div style="margin-top:60px;margin-left:200px;margin-right:100px;text-align:justify" class="container">
+    <h1 style="text-align:center;font-family:calibri;margin-bottom:30px;">Frequently Asked Questions</h1>
+    <p style="font-family:calibri;font-size:19px;">
+        Here at Parkview, we are committed to providing you with the best possible experience. Please see below the FAQs, if you have any further questions, please contact our reservations team.
+    </p>
+    <div style="font-family:calibri;font-size:19px;">
+        <div>
+            <p>
+                <b>1. What is Parkview?</b>
+                <br>
+                Parkview is a premium hotel and tourism company specializing in providing luxury accommodations and travel experiences.
+                <br >
+                <br />
+                <b>2. Where are Parkview hotels located?</b>
+                <br>
+                Parkview hotels are located in various scenic destinations across the world, including major cities, beachfronts, and natural retreats.
+                <br>
+                <br/>
+                <b>3. How can I make a reservation at a Parkview hotel?</b>
+                <br>
+                You can make a reservation on our website by selecting your destination, travel dates, and preferred hotel. 
+                Alternatively, you can contact our reservations team for assistance.
+                <br>
+                <br/>
+                <b>4. What amenities and services do Parkview hotels offer?</b>
+                <br>
+                Parkview hotels offer a wide range of amenities, including luxurious rooms, fine dining restaurants, spa services, fitness centers, and more. 
+                Specific amenities may vary by location.
+                <br>
+                <br />
+                <b>5. Are there any special offers or packages available?</b>
+                <br>
+                Yes, we frequently offer special packages, seasonal promotions, and discounts. Check our website for the latest offers or contact our reservations team.
+                <br>
+                <br/>
+                <b>6. Can I modify or cancel my reservation?</b>
+                <br >
+                Yes, you can modify or cancel your reservation through our website or by contacting our reservations team. Be sure to review our cancellation policy.
+                <br>
+                <br />
+                <b>7. Are Parkview hotels pet-friendly?</b>
+                <br>
+                Some of our hotels may be pet-friendly. Please check with the specific hotel for their pet policy.
+                <br>
+                <br />
+                <b>8. What is the best time to visit [destination]?</b>
+                <br>
+                The ideal time to visit a specific destination may vary. Check our destination guides for information on the best time to visit and local attractions.
+                <br>
+                <br />
+                <b>9. How can I join the Parkview loyalty program?</b>
+                <br>
+                You can join our loyalty program by signing up on our website or inquiring at the front desk of any Parkview hotel.
+                <br>
+                <br />
+                <b>10. Do you offer group bookings or event planning services?</b>
+                <br>
+                - Yes, we offer group bookings and event planning services for meetings, conferences, weddings, and special occasions. Contact our events team for details.
+                <br>
+                <br />
+                <b>11. What safety measures are in place at Parkview hotels?</b>
+                <br>
+                - We prioritize the safety and well-being of our guests. We have implemented various safety measures and protocols in line with local guidelines and health recommendations.
+                <br>
+                <br />
+                <b> 12. How can I contact Parkview customer support?</b>
+                <br>
+                - You can reach our customer support team through the "Contact Us" section on our website or by phone.
+                <br >
+                <br />
+                <b>13. Are there any travel restrictions or visa requirements for international guests?</b>
+                <br>
+                - Travel restrictions and visa requirements vary by country and destination. Check our website or consult with our reservations team for information on travel documentation.
+                <br> 
+                <br />
+                <b>14. Can I purchase gift cards for Parkview hotels?</b>
+                <br>
+                - Yes, you can purchase gift cards for Parkview hotels, which make excellent gifts for friends and family.
+                <br>
+                <br/>
+                <b>15. How can I provide feedback about my stay?</b>
+                <br>
+                - We welcome guest feedback and encourage you to share your experience through our website or by contacting our customer support team.
+                <br >
+                <br />
+            </p>
+        </div>
+    </div>
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+@*---------------------------------------------------------------footer--------------------------------------------------------------------------------*@
+<footer class="py-2" style="background-color:#f2f2f2">
+    <div style="display:flex;margin-left:550px;margin-bottom:20px;">
+        <img style="width:100px;height:100px;" src="~/images/logo.png" alt="logo" />
+        <h4 style="text-align:center;margin-bottom:30px;margin-top:30px;">Parkview Groups of Hotels</h4>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-4">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="SiteMap" class="nav-link p-0 text-muted">Site Map</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="FlyerPartner" class="nav-link p-0 text-muted">Flyer Partners</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="TermsOfUse" class="nav-link p-0 text-muted">Terms Of Use</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="ContactUs" class="nav-link p-0 text-muted">Contact Us</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Careers" class="nav-link p-0 text-muted">Careers</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Privacy" class="nav-link p-0 text-muted">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Blogs" class="nav-link p-0 text-muted">Blogs</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="FAQs" class="nav-link p-0 text-muted">FAQs</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <input id="inputEmail" type="email" placeholder="Email address" class="form-control" />
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-1 border-top">
+            <p>&copy; 2023 Parkview Hotels, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+@*-------------------------------------------------------------------SNEHA CHATBOT ---------------------------------------------------------*@
+<script type="text/javascript">
+    (function (d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
+            window.voiceflow.chat.load({
+                verify: { projectID: '64f463586babf2000798beac' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production'
+            });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+</script>

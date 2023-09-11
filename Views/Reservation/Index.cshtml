@@ -1,0 +1,317 @@
+﻿@model Parkview.Models.Booking
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    var room = ViewData["Room"] as Room;
+    DateOnly today = new DateOnly(DateTime.Now.Date.Year, DateTime.Now.Date.Month, DateTime.Now.Date.Day);
+    DateOnly tmrw = today.AddDays(1);
+}
+
+
+<style>
+    #complogo {
+        margin-left: 10em;
+        width: 70px;
+        height: 70px;
+    }
+
+    .navbar {
+        height: 75px;
+    }
+
+    /* Style for navigation links */
+    .nav-link {
+        font-size: 1.0em;
+        font-family: Calibri;
+        font-weight: bold;
+        margin-left: 0.7em;
+        color: black; /* Default text color */
+    }
+
+
+        /* Hover effect on navigation links */
+        .nav-link:hover {
+            color: darkgrey; /* Change text color to grey on hover */
+        }
+
+
+    .btn {
+        background: rgb(198,100,7);
+        background: linear-gradient(0deg, rgba(198,100,7,1) 25%, rgba(246,194,146,1) 98%);
+        color: aliceblue;
+    }
+</style>
+
+
+
+
+@*----------------------------------------------------------------------------------navbar-----------------------------------------------------------------------------------*@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img id="complogo" src="~/images/logo.png" alt="company-logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Destination" asp-action="Index">DESTINATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dining">DINING</a>
+                    </li>
+                    <partial name="_LoginPartial" />
+                </ul>
+            </div>
+            @*            <div>
+            <a id="bookbtn" style="margin-right:130px;" class="btn" type="button" asp-controller="HotelChain" asp-action="Index">BOOK A STAY</a>
+            </div>*@
+        </div>
+    </nav>
+</header>
+<br />
+<br />
+<br />
+
+
+@*-----------------------------------------------------------------booking details-----------------------------------------------*@
+@*<h1>@room.Name</h1>
+<a asp-controller="Hotel" asp-action="HotelDetail" asp-route-hId="@room.RoomId" class="btn btn-primary"> Go Back </a>*@
+
+
+<h1 class="text-center mb-4 mt-3" style="font-family:calibri;"> Enter Your Booking Details </h1>
+<div class="container">
+    <div class="row">
+        <!-- Room Details Card (Left) -->
+        <div class="col-md-6">
+            <div class="card">
+                <img src="@room.ImageUrl" class="card-img-top" alt="Room Image">
+                <div class="card-body">
+                    <h5 style="text-align:center;"class="card-title">@room.Name</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Free Wifi</li>
+                    <li class="list-group-item">Gym</li>
+                    <li class="list-group-item">Spa</li>
+                    <li class="list-group-item">Swimming Pool</li>
+                    <li class="list-group-item">Breakfast Included</li>
+                </ul>
+                <div class="card-body">
+                    <p class="card-text">Price: ₹ @room.RoomPrice /day</p>
+                </div>
+            </div>
+            <a style="margin-top:20px;" asp-controller="Hotel" asp-action="HotelDetail" asp-route-hId="@room.RoomId" class="btn">GO BACK TO ROOMS</a>
+            
+        </div>
+
+        <!-- Booking Form (Right) -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 style="text-align:center;" class="card-title">Booking Details</h5>
+                    <form asp-action="ReservationStatus" method="post" class="p-5 m-1 border rounded border-black">
+                        <input type="hidden" name="roomId" value="@room.RoomId" />
+                        <input type="hidden" name="userid" value="@UserManager.GetUserId(User)" />
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="GuestName" class="form-label">Guest Name</label>
+                                    <input class="form-control" asp-for="GuestName" />
+                                    <span asp-validation-for="GuestName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Email" class="form-label">Email</label>
+                                    <input class="form-control" asp-for="Email" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="PhoneNumber" class="form-label">Phone Number</label>
+                                    <input class="form-control" asp-for="PhoneNumber" />
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="NoOfRooms" class="form-label">Number of Rooms</label>
+                                    <input class="form-control" asp-for="NoOfRooms" />
+                                    <span asp-validation-for="NoOfRooms" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="NoOfAdults" class="form-label">Number of Adults</label>
+                                    <input class="form-control" asp-for="NoOfAdults" />
+                                    <span asp-validation-for="NoOfAdults" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="NoofChildrenUpto5" class="form-label">Children (up to 5 yrs)</label>
+                                    <input class="form-control" asp-for="NoofChildrenUpto5" />
+                                    <span asp-validation-for="NoofChildrenUpto5" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="NoOfChildrenAbove5" class="form-label">Children (6-12 yrs)</label>
+                                    <input class="form-control" asp-for="NoOfChildrenAbove5" />
+                                    <span asp-validation-for="NoOfChildrenAbove5" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CheckInDate" class="form-label">Check-In Date</label>
+                                    <input type="date" class="form-control" asp-for="CheckInDate" min=@today.ToString("yyyy-MM-dd") id="checkInDate" />
+                                    <span asp-validation-for="CheckInDate" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CheckOutDate" class="form-label">Check-Out Date</label>
+                                    <input type="date" class="form-control" asp-for="CheckOutDate" min=@tmrw.ToString("yyyy-MM-dd") id="checkOutDate" />
+                                    <span asp-validation-for="CheckOutDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3 text-center">
+                            <input type="submit" class="btn" value="PROCCED" />
+                        </div>
+                        @*<div asp-validation-summary="All" class="text-danger"></div>*@
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+
+
+
+@*-------------------------------------------------------------footer------------------------------------------------------------------------------------------------*@
+<footer class="py-2" style="background-color:#f2f2f2">
+    <div style="display:flex;margin-left:550px;margin-bottom:20px;">
+        <img style="width:100px;height:100px;" src="~/images/logo.png" alt="logo" />
+        <h4 style="text-align:center;margin-bottom:30px;margin-top:30px;">Parkview Groups of Hotels</h4>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-4">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="SiteMap" class="nav-link p-0 text-muted">Site Map</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="FlyerPartner" class="nav-link p-0 text-muted">Flyer Partners</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="TermsOfUse" class="nav-link p-0 text-muted">Terms Of Use</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="ContactUs" class="nav-link p-0 text-muted">Contact Us</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Careers" class="nav-link p-0 text-muted">Careers</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Privacy" class="nav-link p-0 text-muted">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Blogs" class="nav-link p-0 text-muted">Blogs</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="FAQs" class="nav-link p-0 text-muted">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <input id="inputEmail" type="email" placeholder="Email address" class="form-control" />
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-1 border-top">
+            <p>&copy; 2023 Parkview Hotels, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("form").submit(function (event) {
+            var checkinDate = new Date($("#checkInDate").val());
+            var checkoutDate = new Date($("#checkOutDate").val());
+
+
+
+            var minCheckoutDate = new Date(checkinDate);
+            minCheckoutDate.setDate(checkinDate.getDate() + 1);
+
+
+
+            if (checkoutDate < minCheckoutDate) {
+                alert("Check-out date must be at least 1 day after check-in date.");
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
+@*-------------------------------------------------------------------SNEHA CHATBOT ---------------------------------------------------------*@
+<script type="text/javascript">
+    (function (d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
+            window.voiceflow.chat.load({
+                verify: { projectID: '64f463586babf2000798beac' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production'
+            });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+</script>

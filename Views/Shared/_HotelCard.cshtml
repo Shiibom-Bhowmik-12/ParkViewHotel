@@ -1,0 +1,89 @@
+﻿@model Hotel
+
+<style>
+    .btn {
+        background: rgb(198,100,7);
+        background: linear-gradient(0deg, rgba(198,100,7,1) 25%, rgba(246,194,146,1) 98%);
+        color: aliceblue;
+    }
+
+    .card-container {
+        font-family: Calibri, sans-serif;
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        background-color: #fff;
+        border: 1px solid #ddd; /* Add a light border */
+        border-radius: 8px;
+    }
+    /* Card Image */
+    .card-image img {
+        max-width: 350px; /* Adjust the image width as needed */
+        height: 200px;
+        border-radius: 8px;
+        margin-right: 20px; /* Add spacing between image and details */
+    }
+
+    /* Card Details */
+    .card-details {
+        flex: 1; /* Expand to fill remaining space */
+    }
+
+    .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .card-description {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.4;
+    }
+</style>
+
+
+@*-----------------------------------------------------------------------------hotelcard----------------------------------------------------------------------------------------------*@
+<div class="col-md-4" style="margin-top: 25px;">
+    <div class="card shadow destinations-card">
+        <img src="@Model.ImageUrl" class="card-img-top destination-image" alt="destination" style="height: 250px; object-fit: cover;">
+        <div class="card-body">
+            <h5 style="font-family:Calibri;" class="card-title text-center"><b>@Model.Name</b></h5>
+            <p style="text-align:justify;" class="card-text">@Model.Description</p>
+            <br />
+            <div class="text-center">
+                <a style="font-family:Calibri" class="btn" asp-controller="Hotel" asp-action="HotelDetail" asp-route-hId="@Model.HotelId"><b>BOOK YOUR STAY</b></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*@
+@*-------------------------------------------------------------------------------------dummy cards------------------------------------------------------------------------------------------*@
+@*<div style="margin-top:15px;" class="card">
+    <div class="card-header">
+        <img src="@Model.ImageUrl" alt="@Model.Name" />
+    </div>
+    <div class="card-body">
+        <h2 class="mt-1 card-text"> @Model.Name </h2>
+        <a class="btn" asp-controller="Hotel" asp-action="HotelDetail" asp-route-hId="@Model.HotelId"> View Details </a>
+    </div>
+</div>*@
+
+
+@*<div style="margin-top: 15px;" class="card">
+    <div class="card-header">
+        <img src="@Model.ImageUrl" alt="@Model.Name" />
+    </div>
+    <div class="card-body">
+        <h2 class="mt-1 card-title">@Model.Name</h2>
+        <p class="card-text">@Model.Description</p> <!-- Add a description property to your Model -->
+        <a class="btn" asp-controller="Hotel" asp-action="HotelDetail" asp-route-hId="@Model.HotelId">
+            <i class="fas fa-info-circle"></i> View Details
+        </a>
+    </div>
+</div>*@

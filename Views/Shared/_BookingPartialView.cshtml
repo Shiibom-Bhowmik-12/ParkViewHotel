@@ -1,0 +1,18 @@
+﻿@model Booking
+
+
+
+<div class="container-fluid border border-black">
+    <p> Name : @Model.GuestName </p>
+    <p> No of Adult : @Model.NoOfAdults </p>
+    <p> No of Children (<=5 yrs) : @Model.NoofChildrenUpto5 </p>
+    <p> No of Children (>5 yrs) : @Model.NoOfChildrenAbove5 </p>
+    <p> Check in Date : @Model.CheckInDate </p>
+    <p> Check Out Date: @Model.CheckOutDate </p>
+    <p> GST : @(@Model.BookingTotal * 0.18M) </p>
+    <p> Booking Total : @Model.BookingTotal </p>
+
+
+
+    <a class="btn btn-danger" asp-controller="Reservation" asp-action="CancelReservation" asp-route-Id="@Model.BookingId"> Cancel Booking </a>
+</div>

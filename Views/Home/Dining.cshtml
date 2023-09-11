@@ -1,0 +1,294 @@
+﻿<style>
+    #complogo {
+        margin-left: 10em;
+        width: 70px;
+        height: 70px;
+    }
+
+    .navbar {
+        height: 75px;
+    }
+
+
+    .nav-link {
+        font-size: 1.0em;
+        font-family: Calibri;
+        font-weight: bold;
+        margin-left: 0.7em;
+        color: black;
+    }
+
+
+        .nav-link:hover {
+            color: darkgrey;
+        }
+
+    #bookbtn {
+        background: rgb(246,194,146);
+        background: linear-gradient(0deg, rgba(246,194,146,1) 0%, rgba(198,100,7,1) 88%);
+        color: white;
+        transition: background-color 0.2s, transform 0.2s;
+        font-weight: bold;
+        font-family: Calibri;
+    }
+
+        #bookbtn:hover {
+            background-color: rgba(214, 110, 12, 1);
+            transform: scale(1.1);
+        }
+
+    /* Style the video container */
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+    }
+
+    /* Style the video element */
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .btn {
+        background: rgb(198,100,7);
+        background: linear-gradient(0deg, rgba(198,100,7,1) 25%, rgba(246,194,146,1) 98%);
+        color: aliceblue;
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Style individual cards */
+    .card {
+        flex: 0 1 calc(33.3333% - 20px);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+        /* Style card images */
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Style card titles */
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Style card descriptions */
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+</style>
+
+
+
+
+@*------------------------------------------------------navbar------------------------------------------------------------------*@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img id="complogo" src="~/images/logo.png" alt="company-logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Destination" asp-action="Index">DESTINATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dining">DINING</a>
+                    </li>
+                    <partial name="_LoginPartial" />
+                </ul>
+            </div>
+            <div>
+                <a id="bookbtn" style="margin-right:130px;" class="btn" type="button" asp-controller="HotelChain" asp-action="Index">BOOK A STAY</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<br/>
+<br/>
+
+
+@*--------------------------------------------------------------body-------------------------------------------------------------------------*@
+
+<div class="video-container">
+    <video autoplay loop muted poster="poster.jpg">
+        <source src="/videos/food_prep.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<div style="margin-top:60px;margin-left:100px;margin-right:100px;text-align:justify" >
+     <h1 style="text-align:center;font-family:calibri;margin-bottom:30px;">Dining</h1>
+     <p style="font-family:calibri;font-size:1.2em;">The Parkview Group of Hotels offers a wide range of dining options to suit every taste and occasion. From casual to fine dining, from local to international cuisine, our restaurants and bars are sure to delight your palate.
+     Parkview Hotel Groups takes immense pride in offering high-quality and luxurious dining services that redefine the culinary experience for our guests. Our commitment to excellence extends to every aspect of our dining services, and here's what sets us apart:</p>
+
+    <div style="font-family:calibri;font-size:1.2em;">
+        <div>
+            <p>
+                <b>1. Culinary Excellence:</b> Our top-notch culinary team comprises world-class chefs who are dedicated to crafting exquisite and diverse menus. We are passionate about using only the finest, locally sourced ingredients to create dishes that are both visually stunning and bursting with flavor.
+                <br>
+                <br/>
+                <b>2. Luxurious Atmosphere:</b> Our dining venues are meticulously designed to provide a luxurious and sophisticated ambiance. From elegant fine-dining restaurants to chic lounges, every space is thoughtfully curated to enhance the overall dining experience.
+                <br>
+                <br/>
+                <b>3. Gourmet Delights:</b> We offer a wide range of gourmet cuisines to cater to diverse tastes. Whether it's a classic steakhouse, an authentic Italian trattoria, or an Asian fusion restaurant, our culinary offerings are a journey through global flavors.
+                <br>
+                <br />
+                <b>4. World-Class Service:</b> At Parkview Hotel Groups, we believe that exceptional dining experiences are not just about the food; they are about the service too. Our attentive and professional staff ensure that every guest feels pampered and attended to throughout their meal.
+                <br>
+                <br />
+                <b>5. Top of the World Food:</b> Our signature "Top of the World" dining experience is the epitome of luxury. Set in a breathtaking rooftop restaurant with panoramic views, this culinary adventure takes you on a gastronomic journey with a tasting menu carefully curated by our chefs. It's an unforgettable dining experience that combines gourmet dishes with unparalleled vistas.
+                <br>
+                <br />
+                <b>6. Sustainability:</b> We are committed to sustainable dining practices. Our ingredients are sourced responsibly, and we minimize food waste to contribute to a more eco-friendly dining experience.
+                <br>
+                <br />
+                <b>7. Special Occasions:</b> Celebrate your special moments with us. From intimate dinners to grand celebrations, our team can create customized dining experiences to make your occasions truly memorable.
+                <br>
+                <br />
+           </p>
+        </div>
+    </div>
+</div>
+<br/>
+
+<div class="container">
+        <h1 style="text-align:center;font-family:calibri;margin-bottom:30px;">Dining Views From Our Heavens On Earth</h1>
+    <div class="card-container">
+        <div class="card">
+            <img style="height:200px;width:500px;" src="/images/foodpk_kol.jpg" alt="Image 1">
+            <h2>Parkview Kolkata</h2>
+        </div>
+        <div class="card">
+            <img src="/images/pkchen_dine.jpg" alt="Image 2">
+            <h2>Parkview Chennai</h2>
+        </div>
+        <div class="card">
+            <img src="/images/ex_dine.jpg" alt="Image 3">
+            <h2>Parkview Bangalore</h2>
+        </div>
+    </div>
+</div>
+<br/>
+
+
+
+
+
+@*---------------------------------------------------------------footer--------------------------------------------------------------------------------*@
+<footer class="py-2" style="background-color:#f2f2f2">
+    <div style="display:flex;margin-left:550px;margin-bottom:20px;">
+        <img style="width:100px;height:100px;" src="~/images/logo.png" alt="logo" />
+        <h4 style="text-align:center;margin-bottom:30px;margin-top:30px;">Parkview Groups of Hotels</h4>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-4">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="SiteMap" class="nav-link p-0 text-muted">Site Map</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="FlyerPartner" class="nav-link p-0 text-muted">Flyer Partners</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="TermsOfUse" class="nav-link p-0 text-muted">Terms Of Use</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="ContactUs" class="nav-link p-0 text-muted">Contact Us</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Careers" class="nav-link p-0 text-muted">Careers</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Privacy" class="nav-link p-0 text-muted">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Blogs" class="nav-link p-0 text-muted">Blogs</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="FAQs" class="nav-link p-0 text-muted">FAQs</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <input id="inputEmail" type="email" placeholder="Email address" class="form-control" />
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-1 border-top">
+            <p>&copy; 2023 Parkview Hotels, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+@*-------------------------------------------------------------------SNEHA CHATBOT ---------------------------------------------------------*@
+<script type="text/javascript">
+    (function (d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
+            window.voiceflow.chat.load({
+                verify: { projectID: '64f463586babf2000798beac' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production'
+            });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+</script>

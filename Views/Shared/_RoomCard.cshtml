@@ -1,0 +1,203 @@
+﻿@model Room
+
+<style>
+   
+    /* Style the room image */
+    .room-image img {
+        width: 400px;
+        height: 100px;;
+        object-fit: cover;
+        border-radius: 5px 0 0 5px;
+    }
+
+
+
+    /* Style the room details */
+    .room-details {
+        padding: 20px;
+    }
+
+
+
+        .room-details h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+
+
+    .price {
+        font-size: 1.2rem;
+        color: #f00;
+    }
+
+
+
+    .description {
+        margin: 10px 0;
+        font-size: 1rem;
+        color: #555;
+    }
+
+
+
+    /* Style the amenities */
+    .amenities {
+        margin: 10px 0;
+    }
+
+
+
+        .amenities span {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+
+
+    /* Style the rating */
+    .rating {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        color: #555;
+    }
+
+
+
+    .stars {
+        color: #f0a800;
+        margin-right: 5px;
+    }
+
+
+
+    .reviews {
+        margin-left: 5px;
+    }
+
+
+
+    .container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 50px;
+    }
+
+
+
+    .room-list {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+
+
+    .room-card {
+        display: flex;
+        border: 1px solid #ccc;
+        margin: 10px;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 800px;
+    }
+
+
+
+    .room-card {
+        position: relative; /* Make the room-card a positioned container */
+    }
+
+
+
+    .btn-booking {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        margin-bottom: 10px;
+        margin-right: 40px;
+    }
+
+</style>
+
+
+@*About Room*@
+
+@*<div class="container-fluid">
+    <img src="@Model.ImageUrl" />
+    <h1> @Model.Name </h1>
+    <p> @Model.RoomType </p>
+    <p> @Model.RoomPrice </p>
+    <p> @Model.NoOfRooms </p>
+
+    @if (Model.NoOfRooms > 0)
+    {
+        <a class="btn" asp-controller="Reservation" asp-action="Index" asp-route-roomId="@Model.RoomId">BOOK NOW</a>
+    }
+    else
+    {
+        <a class="btn" asp-controller="Room" asp-action="RoomDetail" asp-route-roomId="@Model.RoomId"> Currently Unavailable! </a>
+    }
+</div>*@
+
+@*
+<div class="container d-flex">
+    <div style="margin-left:200px;" class="container room-card">
+        <div class="room-image">
+            <img src="@Model.ImageUrl" alt="Room Image">
+        </div>
+        <div class="room-details">
+            <h2>@Model.RoomType</h2>
+            <p class="price">₹ @Model.RoomPrice/day</p>
+            <p class="description">A spacious and luxurious suite with stunning views.</p>
+            <div class="amenities">
+                <span><i class="bi bi-wifi"></i> Free Wi-Fi</span>
+                <span><i class="bi bi-p-square"></i> Free Parking</span>
+                <span><i class="bi bi-pool"></i> Pool</span>
+                <span><i class="bi bi-restaurant"></i> Restaurant</span>
+            </div>
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<div style="font-family: Calibri;" class="container2">
+    <div class="room-list">
+        <div style="margin-left: 90px;" class="container room-card">
+            <div class="room-image">
+                <!-- Increase the width of the image as needed -->
+                <img src="@Model.ImageUrl" alt="Room Image" style="width: 300px; height: auto;margin-right:20px;">
+                <!-- Add a booking button to the right corner -->
+                @if (Model.NoOfRooms > 0)
+                {
+                    <a style="margin-top:30px;" class="btn btn-booking" asp-controller="Reservation" asp-action="Index" asp-route-roomId="@Model.RoomId"><b>BOOK NOW</b></a>
+                }
+                else
+                {
+                    <a class="btn btn-booking" disabled="disabled"><b>CURRENTLY UNAVAILABLE </b></a>
+                }
+            </div>
+            <div class="room-details">
+                <h2>@Model.RoomType</h2>
+                <p class="price">₹ @Model.RoomPrice/day</p>
+                <p class="description">A spacious and luxurious suite with stunning views.</p>
+                <div class="amenities">
+                    <span><i class="bi bi-wifi"></i> Free Wi-Fi</span>
+                    <span><i class="bi bi-p-square"></i> Free Parking</span>
+                    <span> Pool</span>
+                    <span> Restaurant</span>
+                    <span>Gym</span>
+                    <span>Spa</span>
+                    <span>Upto 4 Guests </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

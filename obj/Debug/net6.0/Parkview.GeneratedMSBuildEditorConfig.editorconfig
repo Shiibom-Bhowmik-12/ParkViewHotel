@@ -1,0 +1,245 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Parkview
+build_property.RootNamespace = Parkview
+build_property.ProjectDir = C:\Shibom\.Net_Training\Parkview\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Shibom\.Net_Training\Parkview
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/LoginWith2fa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbldpdGgyZmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW5hYmxlQXV0aGVudGljYXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Destination/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGluYXRpb25cRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Destination/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGluYXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/Blogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/Careers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJlZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/Dining.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaW5pbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/Experiences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFeHBlcmllbmNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/FAQs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGQVFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/FlyerPartner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGbHllclBhcnRuZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/Offers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPZmZlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/SiteMap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaXRlTWFwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/TermsOfUse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXJtc09mVXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Home/Wedding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXZWRkaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/HotelChain/HotelChainDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxDaGFpblxIb3RlbENoYWluRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/HotelChain/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxDaGFpblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/HotelChain/SearchHotelChain.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxDaGFpblxTZWFyY2hIb3RlbENoYWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Hotel/HotelDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcSG90ZWxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Hotel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Hotel/SearchHotelByName.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcU2VhcmNoSG90ZWxCeU5hbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Reservation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Reservation/ReservationByUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cUmVzZXJ2YXRpb25CeVVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Reservation/ReservationFail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cUmVzZXJ2YXRpb25GYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Reservation/ReservationStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cUmVzZXJ2YXRpb25TdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Reservation/ReservationSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cUmVzZXJ2YXRpb25TdWNjZXNzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Room/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Room/RoomDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxSb29tRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_BookingPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb29raW5nUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_DestinationCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZXN0aW5hdGlvbkNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_DestinationCardPrice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZXN0aW5hdGlvbkNhcmRQcmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_DestinationCardWithoutButton.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZXN0aW5hdGlvbkNhcmRXaXRob3V0QnV0dG9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_HotelCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ib3RlbENhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_HotelChainCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ib3RlbENoYWluQ2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_RoomCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Sb29tQ2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Shibom/.Net_Training/Parkview/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-alkf67x5nm

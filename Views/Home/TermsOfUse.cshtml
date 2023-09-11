@@ -1,0 +1,293 @@
+﻿<style>
+    #complogo {
+        margin-left: 10em;
+        width: 70px;
+        height: 70px;
+    }
+
+    .navbar {
+        height: 75px;
+    }
+
+
+    .nav-link {
+        font-size: 1.0em;
+        font-family: Calibri;
+        font-weight: bold;
+        margin-left: 0.7em;
+        color: black;
+    }
+
+
+        .nav-link:hover {
+            color: darkgrey;
+        }
+
+    #bookbtn {
+        background: rgb(246,194,146);
+        background: linear-gradient(0deg, rgba(246,194,146,1) 0%, rgba(198,100,7,1) 88%);
+        color: white;
+        transition: background-color 0.2s, transform 0.2s;
+        font-weight: bold;
+        font-family: Calibri;
+    }
+
+        #bookbtn:hover {
+            background-color: rgba(214, 110, 12, 1);
+            transform: scale(1.1);
+        }
+
+    .btn {
+        background: rgb(198,100,7);
+        background: linear-gradient(0deg, rgba(198,100,7,1) 25%, rgba(246,194,146,1) 98%);
+        color: aliceblue;
+    }
+</style>
+
+
+
+
+@*------------------------------------------------------navbar------------------------------------------------------------------*@
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img id="complogo" src="~/images/logo.png" alt="company-logo" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Destination" asp-action="Index">DESTINATIONS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-text" class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dining">DINING</a>
+                    </li>
+                    <partial name="_LoginPartial" />
+                </ul>
+            </div>
+            <div>
+                <a id="bookbtn" style="margin-right:130px;" class="btn" type="button" asp-controller="HotelChain" asp-action="Index">BOOK A STAY</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<br />
+<br />
+
+
+@*--------------------------------------------------------------body-------------------------------------------------------------------------*@
+
+<div style="margin-top:60px;margin-left:200px;text-align:justify" class="container">
+    <h1 style="text-align:center;font-family:calibri;margin-bottom:30px;">Terms and Conditions</h1>
+    <div style="font-family:calibri;font-size:19px;">
+        <div>
+            <p>
+                Last Updated: 7.09.2022
+            </p>
+        </div>
+        <div>
+            <p>
+                <b>1. Acceptance of Terms</b>
+                <br>
+                By accessing or using the Parkview website (the "Website"), you agree to be bound by these Terms of Use ("Terms").
+                If you do not agree to these Terms, please do not use the Website. These Terms may be updated by Parkview ("we," "us," or "our") from time to time,
+                and your continued use of the Website constitutes your acceptance of any such updates.
+                <br>
+                <br/>
+                <b>2. Use of the Website</b>
+                <br>
+                You agree to use the Website for lawful purposes and in accordance with these Terms. You may not use the Website in any way that could damage,
+                disable, overburden, or impair the Website, interfere with other users' access to the Website, or engage in any activity that violates applicable
+                laws or regulations.
+                <br>
+                <br/>
+                <b>3. Privacy Policy</b>
+                <br>
+                Your use of the Website is also governed by our Privacy Policy, which can be found <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>.
+                By using the Website, you consent to the collection and use of your personal information as described in the Privacy Policy.
+                <br>
+                <br/>
+                <b>4. User Accounts</b>
+                <br>
+                Some features of the Website may require you to create a user account. 
+                You are responsible for maintaining the confidentiality of your account information, including your username and password, 
+                and for all activity that occurs under your account. You agree to notify us immediately of any unauthorized use of your account.
+                <br>
+                <br/>
+                <b>5. Content</b>
+                <br>
+                You may submit content to the Website, including but not limited to reviews, comments, or other user-generated content.
+                By submitting content, you grant us a non-exclusive, royalty-free, perpetual, irrevocable, and fully sublicensable right to use,
+                reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content worldwide.
+
+                You are solely responsible for the content you submit, and you represent and warrant that you own or have the necessary rights to
+                such content and that it does not violate these Terms or the rights of any third party.
+                <br>
+                <br/>
+                <b>6. Intellectual Property</b>
+                <br>
+                All content on the Website, including text, graphics, logos, images, audio clips, video, data, and software, 
+                is the property of Parkview or its licensors and is protected by copyright, trademark, patent, or other intellectual property laws.
+                You may not use, reproduce, distribute, modify, or create derivative works of any content on the Website without our prior written consent.
+                <br>
+                <br/>
+                <b>7. Third-Party Links</b>
+                <br>
+                The Website may contain links to third-party websites or services that are not owned or controlled by Parkview. 
+                We are not responsible for the content or privacy practices of these third-party websites. 
+                We encourage you to review the terms and privacy policies of any third-party websites you visit.
+                <br>
+                <br/>
+                <b>8. Disclaimers</b>
+                <br>
+                The Website is provided "as is" and "as available" without any warranties of any kind, either express or implied, including,
+                but not limited to, the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. 
+                We do not warrant that the Website will be error-free or uninterrupted.
+                <br>
+                <br/>
+                <b>9. Limitation of Liability</b>
+                <br>
+                To the fullest extent permitted by applicable law, Parkview shall not be liable for any indirect, incidental, special,
+                consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, 
+                goodwill, or other intangible losses, resulting from (a) your use or inability to use the Website; (b) any unauthorized access to or use of our 
+                servers and/or any personal information stored therein; (c) any interruptions or cessation of transmission to or from the Website; (d) any bugs, 
+                viruses, trojan horses, or the like that may be transmitted to or through the Website by any third party; or (e) any errors or omissions in any 
+                content or for any loss or damage of any kind incurred as a result of your use of any content posted, emailed, transmitted, or otherwise made available via the Website, 
+                whether based on warranty, contract, tort, or any other legal theory, and whether or not Parkview has been informed of the possibility of such damage.
+                <br>
+                <br/>
+                <b>10. Indemnification</b>
+                <br>
+                You agree to defend, indemnify, and hold harmless Parkview and its officers, directors, 
+                employees, and agents from and against any claims, liabilities, damages, losses, and expenses, 
+                including without limitation, reasonable attorney's fees and costs, arising out of or in any way connected with your 
+                access to or use of the Website or your violation of these Terms.
+                <br>
+                <br/>
+                <b>11. Governing Law and Jurisdiction</b>
+                <br>
+                These Terms are governed by and construed in accordance with the laws of Government of India, 
+                without regard to its conflict of law principles. You agree to submit to the exclusive jurisdiction of the 
+                courts located within Mumbai for the resolution of any dispute arising under these Terms.
+                <br>
+                <br/>
+                <b>12. Contact Us</b>
+                <br>
+                If you have any questions or concerns about these Terms, please contact us at <email address="skrbhowmik.2023@gmmail.com" content="Mail"></email>.
+                <br>
+                <br/>
+             </p>
+        </div>
+    </div>
+</div>
+<br />
+
+
+
+
+
+
+
+
+
+
+
+@*---------------------------------------------------------------footer--------------------------------------------------------------------------------*@
+<footer class="py-2" style="background-color:#f2f2f2">
+    <div style="display:flex;margin-left:550px;margin-bottom:20px;">
+        <img style="width:100px;height:100px;" src="~/images/logo.png" alt="logo" />
+        <h4 style="text-align:center;margin-bottom:30px;margin-top:30px;">Parkview Groups of Hotels</h4>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-4">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="SiteMap" class="nav-link p-0 text-muted">Site Map</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="FlyerPartner" class="nav-link p-0 text-muted">Flyer Partners</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="TermsOfUse" class="nav-link p-0 text-muted">Terms Of Use</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="ContactUs" class="nav-link p-0 text-muted">Contact Us</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Careers" class="nav-link p-0 text-muted">Careers</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Privacy" class="nav-link p-0 text-muted">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2 mb-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="Blogs" class="nav-link p-0 text-muted">Blogs</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a asp-controller="Home" asp-action="FAQs" class="nav-link p-0 text-muted">FAQs</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p>Monthly digest of whats new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <input id="inputEmail" type="email" placeholder="Email address" class="form-control" />
+                        <button type="submit" class="btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-1 border-top">
+            <p>&copy; 2023 Parkview Hotels, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-twitter"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="link-body-emphasis" href="https://www.linkedin.com/in/shibom-bhowmik-9709081b8/">
+                        <i style="color:black;" class="bi bi-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+@*-------------------------------------------------------------------SNEHA CHATBOT ---------------------------------------------------------*@
+<script type="text/javascript">
+    (function (d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
+            window.voiceflow.chat.load({
+                verify: { projectID: '64f463586babf2000798beac' },
+                url: 'https://general-runtime.voiceflow.com',
+                versionID: 'production'
+            });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+</script>

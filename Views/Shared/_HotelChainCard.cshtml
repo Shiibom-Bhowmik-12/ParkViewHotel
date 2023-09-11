@@ -1,0 +1,22 @@
+﻿@model HotelChain
+
+<style>
+    .btn {
+        background: rgb(198,100,7);
+        background: linear-gradient(0deg, rgba(198,100,7,1) 25%, rgba(246,194,146,1) 98%);
+        color: aliceblue;
+    }
+</style>
+
+<div class="col-md-4" style="margin-top: 40px;">
+    <div class="card shadow HotelChain-card">
+        <img src="/@Model.ImageUrl" class="card-img-top destination-image" alt="@Model.Name" style="max-height: 200px; object-fit: cover;">
+        <div class="card-body">
+            <h5 style="font-family:Calibri;" class="card-title text-center"><b>@Model.Name</b></h5>
+@*            <p style="text-align:justify;" class="card-text">@Model.Description</p>*@
+            <div class="text-center">
+                <a style="font-family:Calibri" class="btn" asp-controller="HotelChain" asp-action="HotelChainDetail" asp-route-id="@Model.HotelChainId"><b>VIEW HOTELS</b></a>
+            </div>
+        </div>
+    </div>
+</div>

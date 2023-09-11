@@ -1,0 +1,21 @@
+﻿<style>
+    .btn{
+        background: rgb(198,100,7);
+        background: linear-gradient(0deg, rgba(198,100,7,1) 25%, rgba(246,194,146,1) 98%);
+        color:aliceblue;
+    }
+</style>
+
+<div class="col-md-4" style="margin-top: 30px;">
+    <div class="card shadow destinations-card">
+        <img src="@Model.DestinationImageUrl" class="card-img-top destination-image" alt="destination" style="max-height: 200px; object-fit: cover;">
+        <div class="card-body">
+            <h5 style="font-family:Calibri;" class="card-title text-center"><b>@Model.DestinationName</b></h5>
+            <p style="text-align:justify;" class="card-text">@Model.DestinationDescription</p>
+            <br/>
+            <div class="text-center">
+                <a style="font-family:Calibri" class="btn" asp-controller="Destination" asp-action="Detail" asp-route-destinationId="@Model.DestinationId"><b>VIEW DETAILS</b></a>
+            </div>
+        </div>
+    </div>
+</div>
